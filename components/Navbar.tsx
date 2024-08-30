@@ -19,7 +19,7 @@ const Navbar = () => {
       </Link>
 
       <DropdownMenu>
-        <DropdownMenuTrigger>
+        <DropdownMenuTrigger className="focus:outline-none">
           <Avatar>
             <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
             <AvatarFallback className="text-black">BT</AvatarFallback>
@@ -28,10 +28,12 @@ const Navbar = () => {
         <DropdownMenuContent>
           <DropdownMenuLabel>My Account</DropdownMenuLabel>
           <DropdownMenuSeparator />
-          <DropdownMenuItem>Profile</DropdownMenuItem>
-          <DropdownMenuItem>Billing</DropdownMenuItem>
-          <DropdownMenuItem>Team</DropdownMenuItem>
-          <DropdownMenuItem>Subscription</DropdownMenuItem>
+          <DropdownMenuItem>
+            <Link href={'/'}>
+              Profile
+            </Link>
+          </DropdownMenuItem>
+          <DropdownMenuItem><Link href={'/authgit'}></Link></DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
     </div>
